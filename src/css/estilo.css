@@ -1,0 +1,94 @@
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700;&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto',sans-serif;
+
+    background-color: var(--fundo);
+}
+
+#faq-card {
+    display: flex;
+    max-width: 65.5rem;
+    min-height: 35rem;
+    background-color: var(--card);
+    border-radius: 2rem;
+    margin: 2rem;
+}
+
+#container-imagem {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#container-imagem img {
+    position: absolute;
+    left: -9rem;
+}
+
+#topicos {
+    padding: 6rem 4rem;
+    margin-left: 18.8rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#topicos h1 {
+    font-size: 2.5rem;
+}
+
+#topicos .topico .cabecalho-topico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#topicos .topico .cabecalho-topico .titulo-topico {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    padding-right: 1rem;
+}
+#topicos .topico .cabecalho-topico input {
+    display: none;
+}
+#topicos .topico .cabecalho-topico .seta {
+    font-size: 2.4rem;
+    padding-right: 1.3rem;
+}
+/* Configurar estilos de seta Ativo/Inativo */
+.seta.inativo {
+    color: var(--inativo);
+}
+.seta.ativo {
+    color: var(--ativo);
+}
+
+#topicos .topico .info {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-top: 1rem;
+}
+/* Configurar Mostrar/Esconder */
+#topicos .topico .info.mostrar {
+    display: block;
+}
+#topicos .topico .info.esconder {
+    display: none;
+}
+
+#topicos .topico {
+    border-bottom: 0.1rem solid var(--neutro);
+    padding-bottom: 1.5rem;
+}
+#topicos .topico:nth-last-child(1) {
+    border-bottom: none;
+}

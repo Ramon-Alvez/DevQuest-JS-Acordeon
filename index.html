@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Desafio JS - Acordeon</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/variaveis.css">
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+</head>
+<body>
+    <main id="faq-card">
+        <div id="container-imagem">
+            <img src="src/images/mockup.png" alt="Mockup do FAQ">
+        </div>
+
+        <section id="topicos">
+            <h1>FAQ</h1>
+
+            <article class="topico">
+                <header class="cabecalho-topico">
+                    <h2 class="titulo-topico">Lorem ipsum dolor sit amet, consectetur ?</h2>
+
+                    <input type="checkbox" name="topico" id="topico1">
+                    <label for="topico1">
+                        <i class="fa-solid fa-caret-down seta inativo"></i>
+                    </label>
+                </header>
+
+                <p class="info esconder">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat.</p>
+            </article>
+
+            <article class="topico">
+                <header class="cabecalho-topico">
+                    <h2 class="titulo-topico">Lorem ipsum dolor sit amet ?</h2>
+
+                    <input type="checkbox" name="topico" id="topico2">
+                    <label for="topico2">
+                        <i class="fa-solid fa-caret-down seta ativo"></i>
+                    </label>
+                </header>
+
+                <p class="info mostrar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat.</p>
+            </article>
+
+            <article class="topico">
+                <header class="cabecalho-topico">
+                    <h2 class="titulo-topico">Lorem ipsum dolor sit ?</h2>
+
+                    <input type="checkbox" name="topico" id="topico3">
+                    <label for="topico3">
+                        <i class="fa-solid fa-caret-down seta inativo"></i>
+                    </label>
+                </header>
+
+                <p class="info esconder">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis egestas ex, a elementum est. Mauris auctor nunc quis erat.</p>
+            </article>
+            
+        </section>
+    </main>
+</body>
+</html>

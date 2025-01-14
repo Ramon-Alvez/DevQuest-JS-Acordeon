@@ -1,0 +1,17 @@
+@media screen and (max-width: 590px) {
+    #faq-card {
+        flex-direction: column;
+    }
+    #topicos {
+        margin: 0;
+        margin-top: 6rem;
+    }
+    
+    #container-imagem img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 20rem;
+    }
+}
