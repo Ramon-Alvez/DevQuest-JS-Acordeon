@@ -63,13 +63,16 @@ body {
 #topicos .topico .cabecalho-topico .seta {
     font-size: 2.4rem;
     padding-right: 1.3rem;
+    cursor: pointer;
 }
 /* Configurar estilos de seta Ativo/Inativo */
 .seta.inativo {
     color: var(--inativo);
+    transition: 0.2s ease-out;
 }
 .seta.ativo {
     color: var(--ativo);
+    transition: 0.2s ease-in;
 }
 
 #topicos .topico .info {
@@ -80,9 +83,11 @@ body {
 /* Configurar Mostrar/Esconder */
 #topicos .topico .info.mostrar {
     display: block;
+    transition: 0.3s ease-in;
 }
 #topicos .topico .info.esconder {
     display: none;
+    transition: 0.3s ease-out;
 }
 
 #topicos .topico {
