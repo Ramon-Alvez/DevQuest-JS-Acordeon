@@ -2,45 +2,31 @@
 // 2- Reconhecer qual seta foi clicada e abrir ela
 // 3- Se houver alguma seta aberta, fechar ela antes de abrir a atual
 
-let setas = document.querySelectorAll("input[name='topico']");
-const tamanhoSetas = setas.length
+let setas = document.querySelectorAll("img[alt = 'seta']");
+let buscarInfo = document.querySelectorAll('article')
 
+function desativarTodasSetas() {
+    setas.forEach((item, indice) => {
+        item.classList.replace('ativo', 'inativo');
+        item.src = "src/images/seta.png";
+        buscarInfo[indice].classList.add('esconder');
+    });
+}
 
-let verificarAtivacao = setas.forEach(function(item, indice) {
-    item.addEventListener('change', () => {
-        console.log(item)
-        console.log(indice)
-        if (item.checked == true) {
-            // Ícone de Seta
-            document.getElementsByTagName('i')[indice].classList.remove('inativo');
-            document.getElementsByTagName('i')[indice].classList.add('ativo');
+setas.forEach((item, indice) => {
+    item.addEventListener('click', () => {
+        if (item.classList.contains('inativo')) {
+            desativarTodasSetas();
+            item.classList.replace('inativo', 'ativo')
+            item.src = "src/images/seta-aberta.png"
+            buscarInfo[indice].classList.remove('esconder')
 
-            // Info
-            document.getElementsByClassName('info')[indice].classList.remove('esconder');
-            document.getElementsByClassName('info')[indice].classList.add('mostrar');
+        } else if (item.classList.contains('ativo'))  {
+            item.classList.replace('ativo', 'inativo')
+            item.src = "src/images/seta.png"
 
-
-            setas.forEach(function(outroItem, outroIndice) {
-                if (indice !== outroIndice) {
-                    outroItem.checked = false;
-                    // Ícone de Seta
-                    document.getElementsByTagName('i')[outroIndice].classList.remove('ativo');
-                    document.getElementsByTagName('i')[outroIndice].classList.add('inativo');
-
-                    // Info
-                    document.getElementsByClassName('info')[outroIndice].classList.add('esconder');
-                    document.getElementsByClassName('info')[outroIndice].classList.remove('mostrar');
-                }
-            })
-        }
-        else {
-            // Ícone de Seta
-            document.getElementsByTagName('i')[indice].classList.add('inativo');
-            document.getElementsByTagName('i')[indice].classList.remove('ativo');
-
-            // Info
-            document.getElementsByClassName('info')[indice].classList.add('esconder');
-            document.getElementsByClassName('info')[indice].classList.remove('mostrar');
+            buscarInfo[indice].classList.add('esconder')
         }
     })
-})
+    
+});

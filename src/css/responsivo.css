@@ -1,17 +1,22 @@
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 860px) {
     #faq-card {
         flex-direction: column;
     }
-    #topicos {
-        margin: 0;
-        margin-top: 6rem;
-    }
-    
     #container-imagem img {
-        position: absolute;
+        width: 22rem;
+        top: 0;
         left: 0;
         right: 0;
         margin: auto;
-        width: 20rem;
+    }
+    #faq-card #faq {
+        margin-left: 0;
+        margin-top: 9rem;
+        align-self: center;
+        padding: 6rem 4rem;
+    }
+    #faq .topico-info {
+        max-width: 39rem;
+        width: auto;
     }
 }
