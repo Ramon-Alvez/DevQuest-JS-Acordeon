@@ -1,99 +1,89 @@
-/* Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700;&display=swap');
+/* Fonte: Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 html {
     font-size: 62.5%;
+    font-family: var(--fonte), sans-serif;
 }
-
 body {
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    font-family: 'Roboto',sans-serif;
 
     background-color: var(--fundo);
 }
 
+/* Card */
 #faq-card {
     display: flex;
-    max-width: 65.5rem;
-    min-height: 35rem;
-    background-color: var(--card);
+    width: 65.5rem;
+    min-height: 35.1rem;
     border-radius: 2rem;
     margin: 2rem;
-}
+    box-shadow: 0 2rem 2rem -1rem var(--sombra);
 
-#container-imagem {
+    background-color: var(--card);
+}
+/* Mockup do card */
+#faq-card #container-imagem {
     position: relative;
-    display: flex;
-    align-items: center;
 }
-
 #container-imagem img {
     position: absolute;
     left: -9rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-#topicos {
-    padding: 6rem 4rem;
-    margin-left: 18.8rem;
-
+/* Parte informativa do Card */
+#faq-card #faq {
+    padding: 6rem 0;
+    margin-left: 22.8rem;
+}
+#faq h1 {
+    font-size: var(--titulo);
+    margin-bottom: calc(var(--espacamentoPadrao) - 0.5rem);
+}
+#faq ul {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--espacamentoPadrao);
 }
-#topicos h1 {
-    font-size: 2.5rem;
+#faq .topico {
+    border-bottom: 0.1rem solid var(--neutro);
 }
-
-#topicos .topico .cabecalho-topico {
+#faq .topico:nth-last-child(1) {
+    border-bottom: none;
+}
+#faq .topico-info {
     display: flex;
+    width: 39rem;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: calc(var(--espacamentoPadrao) - 0.5rem);
+    
 }
-#topicos .topico .cabecalho-topico .titulo-topico {
-    font-size: 1.7rem;
-    line-height: 2rem;
-    padding-right: 1rem;
-}
-#topicos .topico .cabecalho-topico input {
-    display: none;
-}
-#topicos .topico .cabecalho-topico .seta {
-    font-size: 2.4rem;
-    padding-right: 1.3rem;
-    cursor: pointer;
-}
-/* Configurar estilos de seta Ativo/Inativo */
-.seta.inativo {
-    color: var(--inativo);
-    transition: 0.2s ease-out;
-}
-.seta.ativo {
-    color: var(--ativo);
-    transition: 0.2s ease-in;
-}
+#faq .topico-info .seta {
+    width: 1.5rem;
+    height: 1rem;
+    align-self: center;
 
-#topicos .topico .info {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding-top: 1rem;
-}
-/* Configurar Mostrar/Esconder */
-#topicos .topico .info.mostrar {
-    display: block;
+    cursor: pointer;
     transition: 0.3s ease-in;
 }
-#topicos .topico .info.esconder {
+#faq .topico-info h2 {
+    font-size: var(--topico);
+    font-weight: 500;
+    padding-right: 1rem;
+}
+#faq .info {
+    font-size: var(--texto);
+    margin-bottom: var(--espacamentoPadrao);
+    line-height: 1.8rem;
+    max-width: 35rem;
+    transition: 0.3s ease-in;
+}
+#faq .info.esconder {
     display: none;
-    transition: 0.3s ease-out;
-}
-
-#topicos .topico {
-    border-bottom: 0.1rem solid var(--neutro);
-    padding-bottom: 1.5rem;
-}
-#topicos .topico:nth-last-child(1) {
-    border-bottom: none;
 }

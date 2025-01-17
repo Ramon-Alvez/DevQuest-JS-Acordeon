@@ -1,8 +1,20 @@
 :root {
+    /* Cores */
     --neutro: #D4D4D4;
+    --sombra: #00000040;
     --fundo: #ebebeb;
     --card: #FCFCFC;
 
     --inativo: #A6A6A6;
     --ativo: #F14624;
+
+    /* Espaçamento */
+    --espacamentoPadrao: 1.5rem;
+
+    /* Fontes */
+    --fonte: 'Roboto';
+
+    --titulo: 2.5rem;
+    --topico: 1.7rem;
+    --texto: 1.5rem;
 }
